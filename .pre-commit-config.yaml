@@ -1,0 +1,9 @@
+repos:
+  - repo: local
+    hooks:
+      - id: local-pytest
+        name: Run Local Test Suite
+        entry: python -m pytest
+        language: system
+        stages: [pre-push]
+        pass_filenames: false
