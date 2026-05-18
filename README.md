@@ -34,5 +34,5 @@ Transitioning a project to the Open Source ecosystem requires a focus on **Devel
 2.  **Low Friction Onboarding:** High-quality projects are "self-documenting" through their build tools. A `Makefile` combined with standardized packaging reduces the barrier to entry for new contributors.
 3.  **Shippable vs. Verification:** By separating *application logic* (`app/`) from *verification logic* (`tests/`), we ensure that end-users receive a lean package while developers maintain a robust testing suite.
 
------
+---
 *Built with 🚀 for a career transition into the world of Open Source.*
