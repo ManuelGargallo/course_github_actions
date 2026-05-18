@@ -22,7 +22,7 @@ jobs:
     - name: Install Environment Dependencies
       run: |
         python -m pip install --upgrade pip
-        pip install pytest ruff
+        pip install ".[dev]"
 
     - name: Execute Quality Gates via Makefile
       run: |

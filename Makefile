@@ -3,7 +3,10 @@
 .PHONY: lint format test all
 
 # 0. Initialize the local development environment and force-install hooks
-init:
+install:
+	pip install -e ".[dev]"
+
+init: install
 	pre-commit install --hook-type pre-commit
 	pre-commit install --hook-type pre-push
 
