@@ -19,11 +19,11 @@ jobs:
       with:
         python-version: '3.11'
 
-    - name: Install Testing Dependencies
+    - name: Install Environment Dependencies
       run: |
         python -m pip install --upgrade pip
-        pip install pytest
+        pip install pytest ruff
 
-    - name: Execute Test Suite via Pytest
+    - name: Execute Quality Gates via Makefile
       run: |
-        python -m pytest tests/
+        make all
