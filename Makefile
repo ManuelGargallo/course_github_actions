@@ -2,6 +2,11 @@
 
 .PHONY: lint format test all
 
+# 0. Initialize the local development environment and force-install hooks
+init:
+	pre-commit install --hook-type pre-commit
+	pre-commit install --hook-type pre-push
+
 # 1. Check for programming errors and style violations
 lint:
 	python -m ruff check
