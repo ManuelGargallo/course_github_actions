@@ -27,6 +27,16 @@ target-version = "py311"
 [tool.ruff.lint]
 select = ["E", "F", "I"]
 
+[tool.mypy]
+python_version = "3.11"
+explicit_package_bases = true
+
+# Enforce strict typing configurations
+disallow_untyped_defs = true       # Rejects functions missing annotations
+no_implicit_optional = true         # Prevents treating x: str = None without Optional
+warn_return_any = true             # Warns if you return an 'Any' value from a typed function
+warn_unused_ignores = true         # Flags # type: ignore comments that are no longer needed
+
 [tool.pytest.ini_options]
 testpaths = ["tests"]
 pythonpath = ["."]
