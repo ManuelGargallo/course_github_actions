@@ -17,6 +17,7 @@ packages = ["app"]
 dev = [
     "pytest",
     "ruff",
+    "mypy",
 ]
 
 [tool.ruff]
