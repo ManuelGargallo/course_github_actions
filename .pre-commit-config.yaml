@@ -8,6 +8,13 @@ repos:
         stages: [pre-commit]
         pass_filenames: false
 
+      - id: local-typecheck
+        name: Run Type Checking 
+        entry: make typecheck
+        language: system
+        stages: [pre-commit]
+        pass_filenames: false
+      
       - id: local-pytest
         name: Run Local Test Suite
         entry: make test

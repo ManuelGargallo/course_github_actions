@@ -18,9 +18,13 @@ lint:
 format:
 	python -m ruff format
 
-# 3. Run the test suite
+# 3. Run static type checking
+typecheck:
+	python -m mypy app/
+	
+# 4. Run the test suite
 test:
 	python -m pytest tests/
 
-# 4. Run everything sequentially (Great for a complete CI pass)
-all: lint format test
+# 5. Run everything sequentially (Great for a complete CI pass)
+all: lint format typecheck test
